@@ -7,17 +7,11 @@ connection pool (coroutine)
 
 可在各种环境中使用的 PHP Redis，支持 FPM、CLI、Swoole、WorkerMan，可选的连接池 (协程)
 
-## 技术交流
-
-知乎：https://www.zhihu.com/people/onanying    
-官方QQ群：[284806582](https://shang.qq.com/wpa/qunwpa?idkey=b3a8618d3977cda4fed2363a666b081a31d89e3d31ab164497f53b72cf49968a)
-, [825122875](http://shang.qq.com/wpa/qunwpa?idkey=d2908b0c7095fc7ec63a2391fa4b39a8c5cb16952f6cfc3f2ce4c9726edeaf20)
-敲门暗号：redis
 
 ## Installation
 
 ```
-composer require mix/redis
+composer require haoa/mix-redis
 ```
 
 ## Quick start
@@ -25,7 +19,7 @@ composer require mix/redis
 注意：[协程环境中，不可在并发请求中使用单例](https://openmix.org/mix-php/docs/3.0/#/zh-cn/instructions?id=%e5%8d%8f%e7%a8%8b%e5%8d%95%e4%be%8b%e5%ae%9e%e4%be%8b%e5%8c%96)
 
 ```php
-$rds = new Mix\Redis\Redis('127.0.0.1', 6379, 'password', 0);
+$rds = new Haoa\MixRedis\Redis('127.0.0.1', 6379, 'password', 0);
 
 $rds->set('foo', 'bar');
 $value = $rds->get('foo');
@@ -92,7 +86,7 @@ $ret = $tx->exec();
 $db->setLogger($logger);
 ```
 
-`$logger` 需实现 `Mix\Redis\LoggerInterface`
+`$logger` 需实现 `Haoa\MixRedis\LoggerInterface`
 
 ```php
 interface LoggerInterface
