@@ -1,10 +1,10 @@
 <?php
 
-namespace Mix\Redis;
+namespace Haoa\MixRedis;
 
 /**
  * Class Pipeline
- * @package Mix\Redis
+ * @package Haoa\MixRedis
  */
 class Pipeline extends Multi
 {

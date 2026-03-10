@@ -1,14 +1,14 @@
 <?php
 
-namespace Mix\Redis;
+namespace Haoa\MixRedis;
 
-use Mix\ObjectPool\Exception\WaitTimeoutException;
-use Mix\Redis\Pool\ConnectionPool;
-use Mix\Redis\Pool\Dialer;
+use Haoa\ObjectPool\Exception\WaitTimeoutException;
+use Haoa\MixRedis\Pool\ConnectionPool;
+use Haoa\MixRedis\Pool\Dialer;
 
 /**
  * Class Redis
- * @package Mix\Redis
+ * @package Haoa\MixRedis
  */
 class Redis implements ConnectionInterface
 {

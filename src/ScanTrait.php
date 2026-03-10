@@ -1,10 +1,10 @@
 <?php
 
-namespace Mix\Redis;
+namespace Haoa\MixRedis;
 
 /**
  * Trait ScanTrait
- * @package Mix\Redis
+ * @package Haoa\MixRedis
  */
 trait ScanTrait
 {

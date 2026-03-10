@@ -1,10 +1,10 @@
 <?php
 
-namespace Mix\Redis;
+namespace Haoa\MixRedis;
 
 /**
  * Interface LoggerInterface
- * @package Mix\Redis
+ * @package Haoa\MixRedis
  */
 interface LoggerInterface
 {

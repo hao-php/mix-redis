@@ -1,10 +1,10 @@
 <?php
 
-namespace Mix\Redis;
+namespace Haoa\MixRedis;
 
 /**
  * Class AbstractConnection
- * @package Mix\Redis
+ * @package Haoa\MixRedis
  */
 abstract class AbstractConnection implements ConnectionInterface
 {

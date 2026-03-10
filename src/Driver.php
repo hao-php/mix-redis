@@ -1,12 +1,12 @@
 <?php
 
-namespace Mix\Redis;
+namespace Haoa\MixRedis;
 
-use Mix\ObjectPool\ObjectTrait;
+use Haoa\ObjectPool\ObjectTrait;
 
 /**
  * Class Driver
- * @package Mix\Redis
+ * @package Haoa\MixRedis
  */
 class Driver
 {

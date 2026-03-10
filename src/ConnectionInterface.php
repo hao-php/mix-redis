@@ -1,10 +1,10 @@
 <?php
 
-namespace Mix\Redis;
+namespace Haoa\MixRedis;
 
 /**
  * Interface ConnectionInterface
- * @package Mix\Redis
+ * @package Haoa\MixRedis
  * @author liu,jian <coder.keda@gmail.com>
  *
  * @method array|bool sScan($key, &$iterator, $pattern = '', $count = 0)

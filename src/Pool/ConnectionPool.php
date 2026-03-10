@@ -1,13 +1,13 @@
 <?php
 
-namespace Mix\Redis\Pool;
+namespace Haoa\MixRedis\Pool;
 
-use Mix\Redis\Driver;
-use Mix\ObjectPool\AbstractObjectPool;
+use Haoa\MixRedis\Driver;
+use Haoa\ObjectPool\AbstractObjectPool;
 
 /**
  * Class ConnectionPool
- * @package Mix\Redis\Pool
+ * @package Haoa\MixRedis\Pool
  */
 class ConnectionPool extends AbstractObjectPool
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Mix\Redis\Pool;
+namespace Haoa\MixRedis\Pool;
 
-use Mix\ObjectPool\DialerInterface;
-use Mix\Redis\Driver;
+use Haoa\ObjectPool\DialerInterface;
+use Haoa\MixRedis\Driver;
 
 /**
  * Class Dialer
- * @package Mix\Redis\Pool
+ * @package Haoa\MixRedis\Pool
  */
 class Dialer implements DialerInterface
 {
