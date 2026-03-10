@@ -1,5 +1,5 @@
 {
-  "name": "haox/mix-redis",
+  "name": "haoa/mix-redis",
   "description": "Coroutine redis library based on Swoole, built-in connection pool",
   "type": "library",
   "license": "Apache-2.0",
