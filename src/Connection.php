@@ -10,6 +10,18 @@ class Connection extends AbstractConnection
 {
 
     /**
+     * 重连重试次数
+     * @var int
+     */
+    protected $retryCount = 0;
+
+    /**
+     * 最大重连重试次数
+     * @var int
+     */
+    protected $maxRetries = 2;
+
+    /**
      * @return bool
      */
     protected function inTransaction(): bool
@@ -29,7 +41,8 @@ class Connection extends AbstractConnection
             // 执行父类命令
             return parent::__call($name, $arguments);
         } catch (\Throwable $ex) {
-            if (static::isDisconnectException($ex) && !$this->inTransaction()) {
+            if ($this->retryCount < $this->maxRetries && static::isDisconnectException($ex) && !$this->inTransaction()) {
+                $this->retryCount++;
                 // 断开连接异常处理
                 $this->reconnect();
                 // 重新执行命令
