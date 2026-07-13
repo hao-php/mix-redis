@@ -66,6 +66,10 @@ abstract class AbstractConnection implements ConnectionInterface
      */
     protected static function isDisconnectException(\Throwable $ex)
     {
+        if (!$ex instanceof \RedisException) {
+            return false;
+        }
+
         $disconnectMessages = [
             'went away',
             'failed with errno',
