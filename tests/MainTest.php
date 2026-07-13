@@ -22,6 +22,7 @@ final class MainTest extends TestCase
     public function testMulti(): void
     {
         $rds = redis();
+        $rds->set('foo1', 'bar1');
 
         $tx = $rds->multi();
         $tx->set('foo2', "bar2");

@@ -1,16 +1,17 @@
 <?php
 
-const REDIS_HOST = '127.0.0.1';
-const REDIS_PORT = 6379;
-const REDIS_PASSWORD = '';
-const REDIS_DATABASE = 0;
+$configFile = __DIR__ . '/config.php';
+if (!is_file($configFile)) {
+    throw new \RuntimeException('Missing tests/config.php, copy tests/config.example.php and update it for your environment.');
+}
+require $configFile;
 
 /**
- * @return \Mix\Redis\Redis
+ * @return \Haoa\MixRedis\Redis
  */
 function redis()
 {
-    return new \Mix\Redis\Redis(REDIS_HOST, REDIS_PORT, REDIS_PASSWORD, REDIS_DATABASE);
+    return new \Haoa\MixRedis\Redis(REDIS_HOST, REDIS_PORT, REDIS_PASSWORD, REDIS_DATABASE);
 }
 
 function swoole_co_run($func)

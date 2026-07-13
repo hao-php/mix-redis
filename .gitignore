@@ -24,6 +24,7 @@ vendor/
 phpunit.phar
 # local phpunit config
 /phpunit.xml
+/tests/config.php
 
 .env
 src/Command/Test.php
