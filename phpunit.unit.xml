@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="无 Redis 服务单元测试">
+            <file>tests/PoolCleanupTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
